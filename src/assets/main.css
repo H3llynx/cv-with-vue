@@ -1,0 +1,55 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+main {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+a,
+.name {
+  transition: 0.6s;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  background-image: var(--main-gradient);
+  background-size: var(--main-gradient-size);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: var(--main-background-animation);
+  text-align: center;
+}
+
+@media (hover: hover) {
+  a:hover {
+    border: 1px solid var(--color-pill);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    position: relative;
+  }
+
+  main {
+    max-height: 100dvh;
+    overflow-y: scroll;
+    padding: 1rem 3rem;
+  }
+
+}

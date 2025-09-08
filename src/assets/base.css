@@ -1,0 +1,105 @@
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover-gradient);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --section-gap: 150px;
+  --main-gradient-size: 200% 100%;
+  --main-background-animation: colors 6s infinite;
+}
+
+:root[data-theme='light'] {
+  --main-gradient: linear-gradient(120deg,
+      rgba(45, 45, 45, 0.8),
+      rgba(70, 110, 100, 0.95),
+      rgba(190, 140, 70, 0.85));
+  --hover-gradient: linear-gradient(120deg,
+      rgba(45, 45, 45, 0.2),
+      rgba(70, 110, 100, 0.35),
+      rgba(190, 140, 70, 0.25));
+  --icon-gradient: linear-gradient(120deg,
+      rgba(45, 45, 45, 0.1),
+      rgba(70, 110, 100, 0.15),
+      rgba(190, 140, 70, 0.1));
+  --color-background: #f4f4f4;
+  --color-border: rgba(96, 96, 96, 0.12);
+  --color-heading: #747474;
+  --skills: #3535359d;
+  --color-text: #353535;
+  --nav-background: #ddd;
+  --icon-background: #d6d6d6;
+  --color-pill: rgba(100, 140, 130, 0.9);
+}
+
+:root[data-theme='dark'] {
+  --main-gradient: linear-gradient(120deg,
+      #7ec4cf 0%,
+      #ffb86c 60%,
+      #b388eb 100%);
+  --hover-gradient: linear-gradient(120deg,
+      #7ec4cfa6 0%,
+      #ffb86ca3 60%,
+      #b388eb9b 100%);
+  --icon-gradient: linear-gradient(120deg,
+      #7ec4cf49 0%,
+      #ffb86c27 60%,
+      #b388eb43 100%);
+  --color-background: #181818;
+  --color-border: rgba(84, 84, 84, 0.48);
+  --color-heading: #f4f4f4;
+  --skills: rgba(255, 255, 255, 0.6);
+  --color-text: rgba(255, 255, 255, 0.6);
+  --nav-background: transparent;
+  --icon-background: #181818;
+  --color-pill: #ffb86c;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
