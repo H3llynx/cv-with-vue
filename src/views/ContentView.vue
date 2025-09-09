@@ -21,9 +21,3 @@ const cv = computed(() => {
     </div>
   </main>
 </template>
-
-<style>
-.cv {
-  padding: 1.2rem 0;
-}
-</style>

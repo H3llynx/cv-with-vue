@@ -32,6 +32,15 @@
   --section-gap: 150px;
   --main-gradient-size: 200% 100%;
   --main-background-animation: colors 6s infinite;
+  /* for svgs */
+  --bg-svg-light: #f4f4f4;
+  --gradient-stop1-light: rgba(45, 45, 45, 0.8);
+  --gradient-stop2-light: rgba(70, 110, 100, 0.95);
+  --gradient-stop3-light: rgba(190, 140, 70, 0.85);
+  --bg-svg-dark: #181818;
+  --gradient-stop1-dark: #7ec4cf;
+  --gradient-stop2-dark: #ffb86c;
+  --gradient-stop3-dark: #b388eb;
 }
 
 :root[data-theme='light'] {
@@ -55,6 +64,7 @@
   --nav-background: #ddd;
   --icon-background: #d6d6d6;
   --color-pill: rgba(100, 140, 130, 0.9);
+  --bg-rgb: rgb(225, 225, 225, 0.78);
 }
 
 :root[data-theme='dark'] {
@@ -78,6 +88,7 @@
   --nav-background: transparent;
   --icon-background: #181818;
   --color-pill: #ffb86c;
+  --bg-rgb: rgb(20, 20, 20, 0.6);
 }
 
 

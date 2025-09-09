@@ -1,28 +1,11 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue'
+import { useTheme } from '../assets/themeChecker'
 import ThemeIcon from '../components/icons/ThemeIcon.vue'
 
-const theme = ref(localStorage.getItem('theme') || getSystemPreference())
-
-function getSystemPreference() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-}
-
-onMounted(() => {
-  applyTheme(theme.value)
-})
-
-watch(theme, (newTheme) => {
-  localStorage.setItem('theme', newTheme)
-  applyTheme(newTheme)
-})
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme)
-}
+const { theme, setTheme } = useTheme()
 
 function switchTheme() {
-  theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  setTheme(theme.value === 'dark' ? 'light' : 'dark')
 }
 </script>
 

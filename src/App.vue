@@ -9,15 +9,13 @@ import ThemeSelector from './components/ThemeSelector.vue';
     <div class="banner">
       <img alt="Hélène" src="@/assets/banner.jpg" class="profil" />
       <ThemeSelector />
+      <nav>
+        <RouterLink to="/cv/en">English</RouterLink>
+        <RouterLink to="/cv/es">Español</RouterLink>
+        <RouterLink to="/cv/fr">Français</RouterLink>
+      </nav>
     </div>
-    <div class="h-wrapper">
-      <HeaderProfile />
-    </div>
-    <nav>
-      <RouterLink to="/cv/en">English</RouterLink>
-      <RouterLink to="/cv/es">Español</RouterLink>
-      <RouterLink to="/cv/fr">Français</RouterLink>
-    </nav>
+    <HeaderProfile />
   </header>
 
   <RouterView />
@@ -38,14 +36,22 @@ header {
   padding: 1rem;
   width: 100%;
   line-height: 1.5;
-  min-height: 100vh;
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
-.h-wrapper {
-  padding: 1.2rem;
+header::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+header::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 .banner {
@@ -61,8 +67,13 @@ header {
 
 nav {
   width: 100%;
-  font-size: 1rem;
+  padding: 0.2rem;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  background: var(--bg-rgb);
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
 }
 
 nav a.router-link-exact-active {
@@ -81,21 +92,31 @@ nav a {
   margin: 0 0.3rem;
   display: inline-block;
   padding: 0.3rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1023px) {
   header {
     padding: 0;
-    min-height: unset;
+    max-height: unset;
+    position: relative;
   }
 
   .profil {
     border-radius: 0;
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    overflow: hidden;
   }
 
   nav {
-    padding-top: 3rem;
+    border-radius: 0;
   }
 
+  nav a {
+    font-size: 1rem;
+  }
 }
 </style>

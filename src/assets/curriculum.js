@@ -4,6 +4,11 @@ const certificationLinks = {
     logo: "fa-brands fa-free-code-camp",
     tags: ["ResponsiveDesign", "HTML5", "CSS3", "WebDesign", "Frontend"]
   },
+  ux5: {
+    link: "https://coursera.org/share/f687b5db8b0e5dd127b7bb37b8484795",
+    logo: "fa-brands fa-google",
+    tags: ["UXResearch", "UserExperience", "Wireframing", "Figma", "Prototyping"]
+  },
   ux4: {
     link: "https://coursera.org/share/8019a7e126d4f110e312bb91e79b3c51",
     logo: "fa-brands fa-google",
@@ -12,7 +17,7 @@ const certificationLinks = {
   ux3: {
     link: "https://coursera.org/share/29701b39320ebbc1c45a96b1bbf9259d",
     logo: "fa-brands fa-google",
-    tags: ["Wireframing", "Figma", "Prototyping", "UXDesign", "UIUX", "LowFidelity"]
+    tags: ["Wireframing", "Figma", "Prototyping", "UXDesign", "UIUX"]
   },
   ux2: {
     link: "https://coursera.org/share/8bd7d8b82a04d5420f80e349b31e136c",
@@ -59,7 +64,6 @@ export const english = {
       }
     ]
   },
-
   technicalProfessionalTraining: {
     title: "Technical & profesional training",
     content: [
@@ -72,7 +76,7 @@ export const english = {
         year: "2025",
         title: "Google UX Design Professional Certificate",
         institution: "Coursera",
-        status: "In progress"
+        status: "in progress"
       },
       {
         year: "2025",
@@ -155,6 +159,12 @@ export const english = {
         logo: certificationLinks.front.logo,
         tags: certificationLinks.front.tags
       },
+      ux5: {
+        title: "Create High-Fidelity Designs and Prototypes in Figma",
+        link: certificationLinks.ux5.link,
+        logo: certificationLinks.ux5.logo,
+        tags: certificationLinks.ux5.tags
+      },
       ux4: {
         title: "Conduct UX Research and Test Early Concepts",
         link: certificationLinks.ux4.link,
@@ -216,7 +226,6 @@ export const spanish = {
       }
     ]
   },
-
   technicalProfessionalTraining: {
     title: "Formación profesional complementaria",
     content: [
@@ -229,7 +238,7 @@ export const spanish = {
         year: "2025",
         title: "Certificado Profesional en Diseño UX de Google",
         institution: "Coursera",
-        status: "En progreso"
+        status: "en progreso"
       },
       {
         year: "2025",
@@ -316,6 +325,12 @@ export const spanish = {
         logo: certificationLinks.front.logo,
         tags: certificationLinks.front.tags
       },
+      ux5: {
+        title: "Crear diseños y prototipos de alta fidelidad en Figma",
+        link: certificationLinks.ux5.link,
+        logo: certificationLinks.ux5.logo,
+        tags: certificationLinks.ux5.tags
+      },
       ux4: {
         title: "Realizar investigación UX y probar los primeros conceptos",
         link: certificationLinks.ux4.link,
@@ -391,7 +406,7 @@ export const french = {
         year: "2025",
         title: "Google Certificat Professionnel: Conception d'expérience utilisateur",
         institution: "Coursera",
-        status: "En cours"
+        status: "en cours"
       },
       {
         year: "2025",
@@ -473,6 +488,12 @@ export const french = {
         link: certificationLinks.front.link,
         logo: certificationLinks.front.logo,
         tags: certificationLinks.front.tags
+      },
+      ux5: {
+        title: "Créer des conceptions et des prototypes haute fidélité avec Figma",
+        link: certificationLinks.ux5.link,
+        logo: certificationLinks.ux5.logo,
+        tags: certificationLinks.ux5.tags
       },
       ux4: {
         title: " Réaliser des recherches UX et tester les premiers concepts",

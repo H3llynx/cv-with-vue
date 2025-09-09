@@ -14,9 +14,9 @@
 
 <style scoped>
 .item {
-  margin-top: 2rem;
   display: flex;
   position: relative;
+  padding: 1.5rem 0;
 }
 
 .details {
@@ -45,7 +45,7 @@ h3 {
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    padding: 2rem 0 2rem calc(var(--section-gap) / 2);
   }
 
   i {
