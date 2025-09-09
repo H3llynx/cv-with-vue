@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import HeaderProfile from './components/HeaderProfile.vue';
+import SkillSection from './components/SkillSection.vue';
 import ThemeSelector from './components/ThemeSelector.vue';
 </script>
 
@@ -16,22 +17,13 @@ import ThemeSelector from './components/ThemeSelector.vue';
       </nav>
     </div>
     <HeaderProfile />
+    <SkillSection />
   </header>
 
   <RouterView />
 </template>
 
 <style scoped>
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 header {
   padding: 1rem;
   width: 100%;

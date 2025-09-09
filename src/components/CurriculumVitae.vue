@@ -139,9 +139,7 @@ ul {
 .cert-link {
   color: var(--color-background);
   -webkit-text-fill-color: var(--color-background);
-  background: var(--main-gradient);
-  background-size: var(--main-gradient-size);
-  animation: var(--main-background-animation);
+  background: var(--color-pill);
   border-radius: 2rem;
   transition: 0.8s;
   padding: 0.4rem 1.2rem;
@@ -149,7 +147,9 @@ ul {
   font-weight: 600;
 
   &:hover {
-    rotate: 3deg;
+    background: var(--color-heading);
+    border-color: transparent;
+    transform: scale(1.03);
   }
 }
 
@@ -163,10 +163,6 @@ ul {
   padding: 0.4rem 0.6rem;
   font-size: 0.6rem;
   font-weight: 500;
-
-  &:hover {
-    transform: rotate(2deg);
-  }
 }
 
 .status {
