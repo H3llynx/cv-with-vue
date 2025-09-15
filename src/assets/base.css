@@ -68,7 +68,7 @@
   --nav-background: #ddd;
   --icon-background: #d6d6d6;
   --color-pill: rgba(100, 140, 130, 0.9);
-  --bg-rgb: rgb(225, 225, 225, 0.78);
+  --bg-rgb: rgb(225, 225, 225, 0.9);
 }
 
 :root[data-theme='dark'] {
@@ -96,7 +96,7 @@
   --nav-background: transparent;
   --icon-background: #181818;
   --color-pill: #ffb86c;
-  --bg-rgb: rgb(20, 20, 20, 0.6);
+  --bg-rgb: rgb(20, 20, 20, 0.7);
 }
 
 

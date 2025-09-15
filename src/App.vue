@@ -35,6 +35,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
+  animation: fade-in 0.9s linear forwards;
 }
 
 header::-webkit-scrollbar {
@@ -66,6 +67,8 @@ nav {
   background: var(--bg-rgb);
   border-bottom-left-radius: 1.2rem;
   border-bottom-right-radius: 1.2rem;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 nav a.router-link-exact-active {

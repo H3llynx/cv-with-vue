@@ -1,6 +1,6 @@
 <template>
-  <div class="outer-box" tabindex="0">
-    <div class="certification">
+  <div class="card-outer-box">
+    <div class="card-inner-box">
       <h1>
         <slot name="heading"></slot>
       </h1>
@@ -52,27 +52,11 @@
   right: -10px;
   bottom: -15px;
   transition: 0.6s ease;
+  z-index: 0;
 }
 
-.outer-box {
-  padding: 1px;
-  border-radius: 0.6rem;
-  animation: var(--main-background-animation);
-  background: var(--main-gradient);
-  background-size: var(--main-gradient-size);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.certification {
-  background: var(--color-background);
-  border-radius: 0.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.card-inner-box {
   padding: 0.8rem 1.5rem;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
 }
 
 .certification>*:not(.blob) {
@@ -103,5 +87,8 @@ h1 {
   justify-content: space-between;
   font-size: 1.2rem;
   color: var(--color-background);
+  -webkit-text-fill-color: var(--color-background);
+  position: relative;
+  z-index: 1;
 }
 </style>

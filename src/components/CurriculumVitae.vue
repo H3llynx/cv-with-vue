@@ -2,7 +2,9 @@
 defineProps({
   cv: { type: Object, required: true }
 })
+import { portfolio } from '../assets/curriculum.js';
 import CertificationCard from './CertificationCard.vue';
+import PortfolioCard from './PortfolioCard.vue';
 import SectionsCv from './SectionsCv.vue';
 </script>
 
@@ -28,14 +30,43 @@ import SectionsCv from './SectionsCv.vue';
     </template>
     <template #heading>{{ cv.certifications.title }}</template>
     <section>
-      <CertificationCard v-for="cert in Object.values(cv.certifications.content)" :key="cert.title">
+      <CertificationCard v-for="cert in cv.certifications.content" :key="cert.title" class="card">
         <template #heading>{{ cert.title }}</template>
-        <template #tags><span class="tag" v-for="tag in cert.tags" :key="tag">#{{ tag }}</span></template>
+        <template #tags>
+          <span class="tag" v-for="tag in cert.info.tags" :key="tag">#{{ tag }}</span>
+        </template>
         <template #bottom>
-          <a :href="cert.link" target="_blank" class="cert-link">View certification</a>
-          <i :class="cert.logo"></i>
+          <a :href="cert.info.link" target="_blank" class="link" tabindex="0">
+            View certification
+          </a>
+          <i :class="cert.info.logo"></i>
         </template>
       </CertificationCard>
+    </section>
+  </SectionsCv>
+
+  <SectionsCv>
+    <template #icon><span class="material-symbols-outlined">
+        photo_frame
+      </span>
+    </template>
+    <template #heading>{{ portfolio.title }}</template>
+    <section>
+      <PortfolioCard v-for="project in portfolio.content" :key="project.name" class="card">
+        <template #screenshot><img :src="project.screenshot"></template>
+        <template #heading>{{ project.name }}</template>
+        <template #links>
+          <a :href="project.link" class="icon-link" target="_blank" tabindex="0" aria-label="portfolio site">
+            <i class="fa-solid fa-link"></i>
+          </a>
+          <a :href="project.code" class="icon-link" target="_blank" tabindex="0" aria-label="portfolio code">
+            <i class="fa-solid fa-code"></i>
+          </a>
+        </template>
+        <template #tags>
+          <span class="tag" v-for="tag in project.tags" :key="tag">#{{ tag }}</span>
+        </template>
+      </PortfolioCard>
     </section>
   </SectionsCv>
 
@@ -67,9 +98,9 @@ import SectionsCv from './SectionsCv.vue';
     <template #icon><span class="material-symbols-outlined">
         psychology
       </span></template>
-    <template #heading>{{ cv.coreCompetencies.title }}</template>
+    <template #heading>{{ cv.professionalStrengths.title }}</template>
     <ul>
-      <li v-for="competence in cv.coreCompetencies.content" :key="competence">{{ competence }}</li>
+      <li v-for="strength in cv.professionalStrengths.content" :key="strength">{{ strength }}</li>
     </ul>
   </SectionsCv>
 
@@ -86,21 +117,13 @@ import SectionsCv from './SectionsCv.vue';
   </SectionsCv>
 </template>
 
-<style>
+<style scoped>
 section {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-auto-rows: 1fr;
   margin: 1rem 0;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
 }
 
 p {
@@ -136,7 +159,7 @@ ul {
   margin: 1rem auto;
 }
 
-.cert-link {
+.link {
   color: var(--color-background);
   -webkit-text-fill-color: var(--color-background);
   background: var(--color-pill);
@@ -170,5 +193,38 @@ ul {
   font-size: 0.7rem;
   font-weight: 500;
   margin-left: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+.icon-link {
+  font-size: 1.1rem;
+  border: 0;
+  padding: 0 0.4rem;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  border: 0;
+  font-size: 1.4rem;
+}
+
+
+
+@media only screen and (max-width:600px) {
+  section {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card {
+    flex: 0 0 90%;
+    scroll-snap-align: center;
+
+  }
 }
 </style>

@@ -1,4 +1,7 @@
-const certificationLinks = {
+import pokedexScreenshot from './screenshots/pokedex.png';
+import relappmidosScreenshot from './screenshots/relappmidos.png';
+
+const certifications = {
   front: {
     link: "https://www.freecodecamp.org/certification/Hellynx/responsive-web-design",
     logo: "fa-brands fa-free-code-camp",
@@ -31,24 +34,59 @@ const certificationLinks = {
   }
 }
 
+export const portfolio = {
+  title: "Portfolio",
+  content: [
+    {
+      name: "Relappmidos",
+      screenshot: relappmidosScreenshot,
+      link: "https://h3llynx.github.io/Relappmidos/",
+      code: "https://github.com/H3llynx/Relappmidos",
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Authentication",
+        "API Integration",
+        "Interactive UI",
+        "Game Mechanics"
+      ]
+    },
+    {
+      name: "Pokedex",
+      screenshot: pokedexScreenshot,
+      link: "https://h3llynx.github.io/pokedex-vue/",
+      code: "https://github.com/H3llynx/pokedex-vue",
+      tags: [
+        "Vue",
+        "JavaScript",
+        "API Integration",
+        "Multi-View SPA",
+        "Interactive Map",
+        "Theme Toggle"
+      ]
+    }
+  ]
+};
+
 export const english = {
   toolsAndPlatforms: {
-    title: "Tools & platforms",
-    content: ["Google Suite",
-      "MS Office",
-      "Advanced Excel & Google Sheets",
-      "CRM: Zendesk, Salesforce, Kustomer",
-      "Help Desk & Ticketing Systems",
-      "Remote Communication Tools: Slack, Zoom"]
-  },
-  coreCompetencies: {
-    title: "Core competencies",
+    title: "Supporting tools",
     content: [
-      "Customer Support (B2B & B2C)",
-      "KPI Tracking & Reporting",
-      "Cross-Team Collaboration",
-      "Workflow Optimization",
-      "Multilingual Communication"
+      "Google Workspace & Microsoft Office",
+      "Advanced Excel / Google Sheets",
+      "CRM & help-desk systems (Zendesk, Salesforce, Kustomer)",
+      "Remote collaboration: Slack, Zoom"
+    ]
+  },
+  professionalStrengths: {
+    title: "Professional strengths",
+    content: [
+      "User-focused problem solving",
+      "Cross-team collaboration & communication",
+      "Project and workflow organization",
+      "Data-driven decision making",
+      "Multilingual communication (EN/FR/ES)"
     ]
   },
   formalEducation: {
@@ -99,8 +137,7 @@ export const english = {
         institution: "ITO"
       }
     ]
-  }
-  ,
+  },
   workExperience: {
     title: "Work experience",
     content: [
@@ -155,39 +192,27 @@ export const english = {
     content: {
       front: {
         title: "Responsive Web Design",
-        link: certificationLinks.front.link,
-        logo: certificationLinks.front.logo,
-        tags: certificationLinks.front.tags
+        info: certifications.front
       },
       ux5: {
         title: "Create High-Fidelity Designs and Prototypes in Figma",
-        link: certificationLinks.ux5.link,
-        logo: certificationLinks.ux5.logo,
-        tags: certificationLinks.ux5.tags
+        info: certifications.ux5
       },
       ux4: {
         title: "Conduct UX Research and Test Early Concepts",
-        link: certificationLinks.ux4.link,
-        logo: certificationLinks.ux4.logo,
-        tags: certificationLinks.ux4.tags
+        info: certifications.ux4
       },
       ux3: {
         title: "Build Wireframes and Low-Fidelity Prototypes",
-        link: certificationLinks.ux3.link,
-        logo: certificationLinks.ux3.logo,
-        tags: certificationLinks.ux3.tags
+        info: certifications.ux3
       },
       ux2: {
         title: "Start the UX Design Process",
-        link: certificationLinks.ux2.link,
-        logo: certificationLinks.ux2.logo,
-        tags: certificationLinks.ux2.tags
+        info: certifications.ux2
       },
       ux1: {
         title: "Foundations of User Experience",
-        link: certificationLinks.ux1.link,
-        logo: certificationLinks.ux1.logo,
-        tags: certificationLinks.ux1.tags
+        info: certifications.ux1
       }
     }
   }
@@ -195,16 +220,16 @@ export const english = {
 
 export const spanish = {
   toolsAndPlatforms: {
-    title: "Herramientas y plataformas",
-    content: ["Google Suite",
-      "Microsoft Office",
-      "Excel avanzado y Google Sheets",
-      "CRM: Zendesk, Salesforce, Kustomer",
-      "Sistemas de ticketing y ayuda: Zendesk, Salesforce, Kustomer",
-      "Herramientas de comunicación remota: Slack, Zoom"]
+    title: "Herramientas complementarias",
+    content: [
+      "Google Workspace y Microsoft Office",
+      "Excel avanzado / Google Sheets",
+      "CRM y sistemas de ticketing (Zendesk, Salesforce, Kustomer)",
+      "Colaboración remota: Slack, Zoom"
+    ]
   },
-  coreCompetencies: {
-    title: "Competencias clave",
+  professionalStrengths: {
+    title: "Fortalezas profesionales",
     content: [
       "Atención al cliente (B2B y B2C)",
       "Seguimiento y reporte de KPIs",
@@ -261,8 +286,7 @@ export const spanish = {
         institution: "ITO"
       }
     ]
-  }
-  ,
+  },
   workExperience: {
     title: "Experiencia laboral",
     content: [
@@ -321,39 +345,27 @@ export const spanish = {
     content: {
       front: {
         title: "Diseño web responsive",
-        link: certificationLinks.front.link,
-        logo: certificationLinks.front.logo,
-        tags: certificationLinks.front.tags
+        info: certifications.front
       },
       ux5: {
         title: "Crear diseños y prototipos de alta fidelidad en Figma",
-        link: certificationLinks.ux5.link,
-        logo: certificationLinks.ux5.logo,
-        tags: certificationLinks.ux5.tags
+        info: certifications.ux5
       },
       ux4: {
         title: "Realizar investigación UX y probar los primeros conceptos",
-        link: certificationLinks.ux4.link,
-        logo: certificationLinks.ux4.logo,
-        tags: certificationLinks.ux4.tags
+        info: certifications.ux4
       },
       ux3: {
         title: "Crear maquetas funcionales y prototipos de baja fidelidad",
-        link: certificationLinks.ux3.link,
-        logo: certificationLinks.ux3.logo,
-        tags: certificationLinks.ux3.tags
+        info: certifications.ux3
       },
       ux2: {
         title: "Iniciar el proceso de diseño UX: empatizar, definir e idear",
-        link: certificationLinks.ux2.link,
-        logo: certificationLinks.ux2.logo,
-        tags: certificationLinks.ux2.tags
+        info: certifications.ux2
       },
       ux1: {
         title: "Principios fundamentales del diseño de experiencia de usuario (UX)",
-        link: certificationLinks.ux1.link,
-        logo: certificationLinks.ux1.logo,
-        tags: certificationLinks.ux1.tags
+        info: certifications.ux1
       }
     }
   }
@@ -361,24 +373,22 @@ export const spanish = {
 
 export const french = {
   toolsAndPlatforms: {
-    title: "Outils et plateformes",
+    title: "Outils complémentaires",
     content: [
-      "Google Suite",
-      "MS Office",
-      "Excel avancé & Google Sheets",
-      "CRM : Zendesk, Salesforce, Kustomer",
-      "Systèmes de helpdesk et de tickets",
-      "Outils de communication à distance : Slack, Zoom"
+      "Google Workspace et Microsoft Office",
+      "Excel avancé / Google Sheets",
+      "CRM et systèmes de tickets (Zendesk, Salesforce, Kustomer)",
+      "Collaboration à distance : Slack, Zoom"
     ]
   },
-  coreCompetencies: {
-    title: "Compétences clés",
+  professionalStrengths: {
+    title: "Atouts professionnels",
     content: [
-      "Support client (B2B & B2C)",
-      "Suivi et reporting des KPI",
-      "Collaboration inter-équipes",
-      "Optimisation des workflows",
-      "Communication multilingue"
+      "Résolution de problèmes centrée sur l’utilisateur",
+      "Collaboration et communication inter-équipes",
+      "Organisation de projets et de workflows",
+      "Prise de décision basée sur les données",
+      "Communication multilingue (EN/FR/ES)"
     ]
   },
   formalEducation: {
@@ -485,39 +495,27 @@ export const french = {
     content: {
       front: {
         title: "Web design responsive",
-        link: certificationLinks.front.link,
-        logo: certificationLinks.front.logo,
-        tags: certificationLinks.front.tags
+        info: certifications.front
       },
       ux5: {
         title: "Créer des conceptions et des prototypes haute fidélité avec Figma",
-        link: certificationLinks.ux5.link,
-        logo: certificationLinks.ux5.logo,
-        tags: certificationLinks.ux5.tags
+        info: certifications.ux5
       },
       ux4: {
         title: " Réaliser des recherches UX et tester les premiers concepts",
-        link: certificationLinks.ux4.link,
-        logo: certificationLinks.ux4.logo,
-        tags: certificationLinks.ux4.tags
+        info: certifications.ux4
       },
       ux3: {
         title: "Créer des maquettes fonctionnelles et des prototypes basse fidélité",
-        link: certificationLinks.ux3.link,
-        logo: certificationLinks.ux3.logo,
-        tags: certificationLinks.ux3.tags
+        info: certifications.ux3
       },
       ux2: {
         title: "Initier le processus de conception UX : empathie, définition et idéation",
-        link: certificationLinks.ux2.link,
-        logo: certificationLinks.ux2.logo,
-        tags: certificationLinks.ux2.tags
+        info: certifications.ux2
       },
       ux1: {
         title: "Principes fondamentaux de la conception de l’expérience utilisateur (UX)",
-        link: certificationLinks.ux1.link,
-        logo: certificationLinks.ux1.logo,
-        tags: certificationLinks.ux1.tags
+        info: certifications.ux1
       }
     }
   }

@@ -1,5 +1,25 @@
 @import './base.css';
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 #app {
   margin: 0 auto;
   padding: 0;
@@ -8,7 +28,7 @@
 
 main {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 0.5rem;
 }
 
 h1 {
@@ -36,6 +56,27 @@ a,
   -webkit-text-fill-color: transparent;
   animation: var(--main-background-animation);
   text-align: center;
+}
+
+.card-outer-box {
+  padding: 1px;
+  margin-bottom: 10px;
+  border-radius: 0.6rem;
+  animation: var(--main-background-animation);
+  background: var(--main-gradient);
+  background-size: var(--main-gradient-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-inner-box {
+  background: var(--color-background);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 @media (hover: hover) {

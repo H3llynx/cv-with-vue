@@ -21,7 +21,9 @@
 
 .details {
   flex: 1;
-  margin-left: 1rem;
+  padding-left: 1rem;
+  max-width: 100%;
+  animation: fade-in 1s linear forwards, move-up 1s linear forwards;
 }
 
 i {

@@ -3,15 +3,18 @@
     <h1 class="name">Hélène Teychené</h1>
     <h2>Front End Developer | UX Designer</h2>
     <ul class="contact">
-      <li><i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/helene-tch/"
-          target="_blank">Contact
-          me on LinkedIn</a>
+      <li><a href="https://github.com/H3llynx" target="_blank" tabindex="0" aria-label="github"><i
+            class="fa-brands fa-github"></i></a>
+      </li>
+      <li><a href="https://www.linkedin.com/in/helene-tch/" target="_blank" tabindex="0" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
       </li>
       <li>
-        <i class="fa-solid fa-envelope"></i><a href="mailto:helenetrafficker@gmail.com">Email me</a>
+        <a href="mailto:helenetrafficker@gmail.com" tabindex="0" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i></a>
       </li>
       <li>
-        <i class="fa-solid fa-location-dot"></i><span>Barcelona, Spain</span>
+        <i class="fa-solid fa-location-dot"></i><span>Barcelona</span>
       </li>
     </ul>
   </div>
@@ -20,6 +23,23 @@
 <style scoped>
 .info {
   padding: 1.2rem;
+}
+
+.info a {
+  color: var(--color-heading);
+  -webkit-text-fill-color: var(--color-heading);
+  font-size: 1.1rem;
+  border: 0;
+}
+
+.info i:not(.fa-location-dot) {
+  margin: 0;
+}
+
+.info a:hover,
+.info a:focus-visible {
+  border: 0;
+  font-size: 1.4rem;
 }
 
 h2 {
@@ -37,20 +57,5 @@ h2 {
 
 .contact li {
   padding: 0.6rem;
-}
-
-.contact a,
-.contact span {
-  padding: 0.4rem 0.8rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .contact {
-    flex-direction: column;
-  }
-
-  .info {
-    padding: 1.2rem 1rem;
-  }
 }
 </style>
