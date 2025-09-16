@@ -112,7 +112,7 @@ export const english = {
     content: [
       {
         year: "2025",
-        title: "JavaScript Algorithms and Data Structures Certification",
+        title: "JavaScript Algorithms and Data Structures",
         institution: "freeCodeCamp",
       },
       {
@@ -133,7 +133,7 @@ export const english = {
       },
       {
         year: "2025",
-        title: "Responsive Web Design Developer Certification",
+        title: "Responsive Web Design Developer",
         institution: "freeCodeCamp",
       },
       {
@@ -201,7 +201,7 @@ export const english = {
     title: "Digital certifications",
     content: {
       javascript: {
-        title: "JavaScript Algorithms and Data Structures Certification",
+        title: "JavaScript Algorithms and Data Structures",
         info: certifications.javascript
       },
       front: {
