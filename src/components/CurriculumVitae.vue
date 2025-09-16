@@ -37,7 +37,7 @@ import SectionsCv from './SectionsCv.vue';
         </template>
         <template #bottom>
           <a :href="cert.info.link" target="_blank" class="link" tabindex="0">
-            View certification
+            Certification
           </a>
           <i :class="cert.info.logo"></i>
         </template>

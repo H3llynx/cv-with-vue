@@ -2,6 +2,11 @@ import pokedexScreenshot from './screenshots/pokedex.png';
 import relappmidosScreenshot from './screenshots/relappmidos.png';
 
 const certifications = {
+  javascript: {
+    link: "https://freecodecamp.org/certification/hellynx/javascript-algorithms-and-data-structures-v8",
+    logo: "fa-brands fa-free-code-camp",
+    tags: ["Javascript", "WebDesign", "Frontend"]
+  },
   front: {
     link: "https://www.freecodecamp.org/certification/Hellynx/responsive-web-design",
     logo: "fa-brands fa-free-code-camp",
@@ -107,6 +112,11 @@ export const english = {
     content: [
       {
         year: "2025",
+        title: "JavaScript Algorithms and Data Structures Certification",
+        institution: "freeCodeCamp",
+      },
+      {
+        year: "2025",
         title: "Front End Developer Course",
         institution: "UOC",
       },
@@ -190,6 +200,10 @@ export const english = {
   certifications: {
     title: "Digital certifications",
     content: {
+      javascript: {
+        title: "JavaScript Algorithms and Data Structures Certification",
+        info: certifications.javascript
+      },
       front: {
         title: "Responsive Web Design",
         info: certifications.front
@@ -254,6 +268,11 @@ export const spanish = {
   technicalProfessionalTraining: {
     title: "Formación profesional complementaria",
     content: [
+      {
+        year: "2025",
+        title: "Algoritmos y Estructuras de Datos en JavaScript",
+        institution: "freeCodeCamp",
+      },
       {
         year: "2025",
         title: "Front End Developer",
@@ -343,6 +362,10 @@ export const spanish = {
   certifications: {
     title: "Certificaciones digitales",
     content: {
+      javascript: {
+        title: "Algoritmos y Estructuras de Datos en JavaScript",
+        info: certifications.javascript
+      },
       front: {
         title: "Diseño web responsive",
         info: certifications.front
@@ -409,6 +432,11 @@ export const french = {
     content: [
       {
         year: "2025",
+        title: "Algorithmes et Structures de Données en JavaScript",
+        institution: "freeCodeCamp",
+      },
+      {
+        year: "2025",
         title: "Formation Développeur Front-End",
         institution: "UOC",
       },
@@ -427,7 +455,6 @@ export const french = {
         year: "2025",
         title: "Web design responsive",
         institution: "freeCodeCamp",
-        certificationLink: "https://www.freecodecamp.org/certification/Hellynx/responsive-web-design",
       },
       {
         year: "2021",
@@ -493,6 +520,10 @@ export const french = {
   certifications: {
     title: "Certifications numériques",
     content: {
+      javascript: {
+        title: "Algorithmes et Structures de Données en JavaScript",
+        info: certifications.javascript
+      },
       front: {
         title: "Web design responsive",
         info: certifications.front

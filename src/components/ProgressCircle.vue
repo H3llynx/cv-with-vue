@@ -64,6 +64,7 @@ const gradientId = `grad-${instance.uid}`;
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    z-index: 0;
 }
 
 .circular-progress {

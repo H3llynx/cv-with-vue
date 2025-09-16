@@ -9,11 +9,12 @@ import ThemeSelector from './components/ThemeSelector.vue';
   <header>
     <div class="banner">
       <img alt="Hélène" src="@/assets/banner.jpg" class="profil" />
-      <ThemeSelector />
+
       <nav>
         <RouterLink to="/cv/en">English</RouterLink>
         <RouterLink to="/cv/es">Español</RouterLink>
         <RouterLink to="/cv/fr">Français</RouterLink>
+        <ThemeSelector />
       </nav>
     </div>
     <HeaderProfile />
@@ -36,6 +37,7 @@ header {
   justify-content: space-between;
   overflow-y: scroll;
   animation: fade-in 0.9s linear forwards;
+  z-index: 1;
 }
 
 header::-webkit-scrollbar {
@@ -69,6 +71,9 @@ nav {
   border-bottom-right-radius: 1.2rem;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a.router-link-exact-active {
@@ -108,10 +113,16 @@ nav a {
 
   nav {
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 2;
+    justify-content: space-around;
   }
 
   nav a {
     font-size: 1rem;
+    padding: 0.3rem 0.8rem;
   }
 }
 </style>

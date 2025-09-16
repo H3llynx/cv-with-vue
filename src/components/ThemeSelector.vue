@@ -10,59 +10,27 @@ function switchTheme() {
 </script>
 
 <template>
-  <div class="button-wrapper">
-    <button tabindex="0" @click="switchTheme">
-      <i>
-        <ThemeIcon />
-      </i>Switch theme
-    </button>
-  </div>
+  <button tabindex="0" @click="switchTheme">
+    <i>
+      <ThemeIcon />
+    </i>
+  </button>
 </template>
 
 <style>
-.button-wrapper {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  background: var(--main-gradient);
-  background-size: var(--main-gradient-size);
-  animation: var(--main-background-animation);
-  border-radius: 2rem;
-  padding: 2px;
-  z-index: 2;
-  transition: 0.8s;
-
-  &:hover {
-    transform: rotate(2deg);
-  }
-}
-
 button {
   border: 0;
-  padding: 0.4rem 1.4rem;
-  border-radius: 2rem;
-  background: var(--color-background);
-  color: var(--color-heading);
-  font-family: "Raleway", sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.02rem;
-  font-weight: 600;
+  padding: 0.4rem;
+  background: transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: var(--color-heading);
+  -webkit-text-fill-color: var(--color-heading);
+  transition: 0.6s;
 
-  &:hover::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: var(--icon-gradient);
-    background-size: var(--main-gradient-size);
-    animation: colors 2s infinite;
-    border-radius: 2rem;
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
