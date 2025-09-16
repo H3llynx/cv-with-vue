@@ -219,12 +219,12 @@ img {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    padding: 0.5rem;
   }
 
   .card {
     flex: 0 0 90%;
     scroll-snap-align: center;
-
   }
 }
 </style>
