@@ -21,7 +21,7 @@
 
 .details {
   flex: 1;
-  padding-left: 1rem;
+  padding: 0 1rem;
   max-width: 100%;
   animation: fade-in 1s linear forwards, move-up 1s linear forwards;
 }
@@ -46,7 +46,6 @@ h3 {
 
 @media (min-width: 1024px) {
   .item {
-    margin-top: 0;
     padding: 2rem 0 2rem calc(var(--section-gap) / 2);
   }
 
@@ -88,6 +87,29 @@ h3 {
 
   .item:last-of-type:after {
     display: none;
+  }
+
+  .details {
+    padding: 0 0 0 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    display: block;
+  }
+
+  i {
+    float: left;
+    padding: 0 1.5rem;
+  }
+
+  h3 {
+    padding-right: 1rem;
+  }
+
+  .details {
+    padding: 0;
   }
 }
 </style>
